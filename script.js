@@ -18,6 +18,12 @@ function addtask(){
     savedata();
 }
 
+inputbox.addEventListener("keydown",function(e){
+    if(e.key === 'Enter'){
+        addtask();
+    }
+})
+
 listcontainer.addEventListener("click" , function(e){
     if(e.target.tagName === "LI"){
         e.target.classList.toggle("checked");
